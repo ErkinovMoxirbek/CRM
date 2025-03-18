@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.example.enums.GenderEnum;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -21,13 +22,13 @@ public class StudentEntity {
     @Column(name = "age")
     private int age;
     @Column(name = "gender")
-    private String gender;
+    private GenderEnum gender;
     @Column(name = "phone")
     private String phone;
     @Column(name = "balance")
-    private Double balance;
+    private Double balance = 0.0;
     @Column(name = "payment")
-    private Boolean payment;
+    private Boolean payment = false;
     @Column(name = "visible")
-    private Boolean visible;
+    private Boolean visible = false;
 }
