@@ -1,5 +1,6 @@
 package com.example.dto;
 
+import com.example.enums.GenderEnum;
 import jakarta.persistence.Column;
 import lombok.*;
 
@@ -12,7 +13,7 @@ public class StudentDTO {
     private String name;
     private String surname;
     private int age;
-    private String gender;
+    private GenderEnum gender;
     private String phone;
     private Double balance;
     private Boolean payment;
