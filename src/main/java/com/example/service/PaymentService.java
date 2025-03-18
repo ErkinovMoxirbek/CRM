@@ -25,7 +25,7 @@ public class PaymentService {
 
         // 🔹 Yangi to‘lov yaratish
         PaymentEntity payment = new PaymentEntity();
-        payment.setStudent(student);
+        payment.setStudentId(student.getId());
         payment.setAmount(amount);
 
         // 🔹 Talaba balansini yangilash
@@ -36,7 +36,7 @@ public class PaymentService {
     }
 
     public List<PaymentEntity> getPaymentsByStudent(Long studentId) {
-        return paymentRepository.findByStudent(studentId);
+        return paymentRepository.findByStudentId(studentId);
     }
 
 }
