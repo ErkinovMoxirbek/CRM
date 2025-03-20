@@ -36,4 +36,5 @@ public class StudentController {
                 .map(student -> ResponseEntity.ok(new StudentDTO(student.getId(),student.getName(),student.getSurname(),student.getAge(),student.getGender(), student.getPhone(), student.getBalance(),student.getPayment(),student.getVisible())))
                 .orElse(ResponseEntity.notFound().build());
     }
+
 }
