@@ -18,13 +18,23 @@ public class StudentService {
     public StudentEntity addStudent(StudentEntity student) {
         return studentRepository.save(student);
     }
+    public StudentEntity updateStudent(StudentEntity student) {
+        return studentRepository.save(student);
+    }
 
     public List<StudentEntity> getAllStudents() {
+        return studentRepository.findAllByVisibleTrue();
+    }
+    public List<StudentEntity> getAllStudentsShow() {
         return studentRepository.findAll();
     }
 
     public Optional<StudentEntity> getStudentByPhoneNumber(String phoneNumber) {
         return studentRepository.findByPhone(phoneNumber);
+    }
+
+    public Optional<StudentEntity> getStudentById(Long id) {
+        return studentRepository.findById(id);
     }
 }
 

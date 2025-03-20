@@ -3,17 +3,20 @@ POST http://localhost:8080/student/add
 Content-Type: application/json
 
 {
-  "name": "Mahmudjon",
-  "surname": "Abdutoliqov",
-  "age": 15,
+  "name": "Hojiakbar",
+  "surname": "Nurmomatov",
+  "age": 18,
   "gender": "MALE",
-  "phone": "+998501554404",
+  "phone": "+998950923353",
   "balance": 0.0,
   "payment": false,
   "visible": true
 }
 ### Student list
-GET http://localhost:8080/student/list
+GET http://localhost:8080/student
+
+### Student All show list
+GET http://localhost:8080/student/showAll
 
 
 

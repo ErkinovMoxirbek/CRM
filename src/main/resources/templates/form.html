@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentlar Ro‘yxati</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Studentlar Ro‘yxati</h2>
+    <button id="addStudentBtn">+ Student qo‘shish</button>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Ism</th>
+            <th>Familiya</th>
+            <th>Yosh</th>
+            <th>Amallar</th>
+        </tr>
+        </thead>
+        <tbody id="studentTableBody">
+        <!-- Studentlar shu yerda chiqadi -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal (Popup) -->
+<div class="modal" id="studentModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Student qo‘shish</h3>
+        <input type="hidden" id="studentId">
+        <label>Ism:</label>
+        <input type="text" id="name" required>
+        <label>Familiya:</label>
+        <input type="text" id="surname" required>
+        <label>Yosh:</label>
+        <input type="number" id="age" required>
+        <button id="saveStudent">Saqlash</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
