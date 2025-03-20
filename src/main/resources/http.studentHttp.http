@@ -1,0 +1,20 @@
+###Add student
+POST http://localhost:8080/student/add
+Content-Type: application/json
+
+{
+  "name": "Mahmudjon",
+  "surname": "Abdutoliqov",
+  "age": 15,
+  "gender": "MALE",
+  "phone": "+998501554404",
+  "balance": 0.0,
+  "payment": false,
+  "visible": true
+}
+### Student list
+GET http://localhost:8080/student/list
+
+
+
+

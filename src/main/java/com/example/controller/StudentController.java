@@ -11,19 +11,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/students")
+@RequestMapping(value = "/student")
 public class StudentController {
     @Autowired
     private StudentService studentService;
 
     // 🔹 Barcha talabalarni olish
-    @GetMapping
+
+    @GetMapping(value = "/list")
     public List<StudentEntity> getAllStudents() {
         return studentService.getAllStudents();
     }
 
     // 🔹 Yangi talaba qo‘shish
-    @PostMapping
+    @PostMapping(value = "/add")
     public ResponseEntity<StudentEntity> addStudent(@RequestBody StudentEntity student) {
         return ResponseEntity.ok(studentService.addStudent(student));
     }
