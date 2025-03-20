@@ -7,6 +7,7 @@ import com.example.entity.StudentEntity;
 import com.example.repository.PaymentRepository;
 import com.example.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -14,21 +15,22 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class PaymentService {
-    private final PaymentRepository paymentRepository;
-    private final StudentRepository studentRepository;
+    @Autowired
+    private PaymentRepository paymentRepository;
+    @Autowired
+    private StudentRepository studentRepository;
 
     public PaymentEntity makePayment(Long studentId, Double amount) {
         StudentEntity student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new RuntimeException("Talaba topilmadi"));
 
-        // 🔹 Yangi to‘lov yaratish
+        System.out.println("Talaba topildi: " + student); // Debug uchun qo'shing
+
         PaymentEntity payment = new PaymentEntity();
-        payment.setStudentId(student.getId());
+        payment.setStudentId(student.getId()); // Xato shu joyda chiqayapti
         payment.setAmount(amount);
 
-        // 🔹 Talaba balansini yangilash
         student.setBalance(student.getBalance() + amount);
         studentRepository.save(student);
 

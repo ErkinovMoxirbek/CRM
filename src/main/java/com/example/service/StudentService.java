@@ -4,15 +4,16 @@ import com.example.dto.StudentDTO;
 import com.example.entity.StudentEntity;
 import com.example.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class StudentService {
-    private final StudentRepository studentRepository;
+    @Autowired
+    private StudentRepository studentRepository;
 
     public StudentEntity addStudent(StudentEntity student) {
         return studentRepository.save(student);

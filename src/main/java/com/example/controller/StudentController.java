@@ -4,6 +4,7 @@ import com.example.dto.StudentDTO;
 import com.example.entity.StudentEntity;
 import com.example.service.StudentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +12,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
-@RequiredArgsConstructor
 public class StudentController {
-    private final StudentService studentService;
+    @Autowired
+    private StudentService studentService;
 
     // 🔹 Barcha talabalarni olish
     @GetMapping
