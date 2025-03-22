@@ -11,9 +11,11 @@ function loadStudents() {
                 let row = `
                     <tr>
                         <td>${index + 1}</td>
-                        <td>${student.name}</td>
-                        <td>${student.surname}</td>
+                        <td>${student.name} ${student.surname}</td>
                         <td>${student.age}</td>
+                        <td>${student.phone}</td>
+                        <td>Loading...</td>
+                        <td>${student.balance} Points</td>
                         <td>
                             <button onclick="editStudent(${student.id})">✏️ Edit</button>
                             <button onclick="deleteStudent(${student.id})">❌ Delete</button>

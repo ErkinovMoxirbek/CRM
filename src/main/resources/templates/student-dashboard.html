@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         body {
             background-color: #f5f6fa;
@@ -57,22 +59,64 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h2>Studentlar Ro‘yxati</h2>
-        <button id="addStudentBtn">+ Student qo‘shish</button>
-        <table>
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Ism</th>
-                <th>Familiya</th>
-                <th>Yosh</th>
-                <th>Amallar</th>
-            </tr>
-            </thead>
-            <tbody id="studentTableBody">
-            <!-- Studentlar shu yerda chiqadi -->
-            </tbody>
-        </table>
+        <!-- Stats Section -->
+        <div class="grid grid-cols-4 gap-5 mb-5">
+            <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
+                <h2 class="text-2xl font-bold">108</h2>
+                <p class="text-gray-600">O‘quvchilar soni</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
+                <h2 class="text-2xl font-bold">52</h2>
+                <p class="text-gray-600">Faol</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
+                <h2 class="text-2xl font-bold">56</h2>
+                <p class="text-gray-600">Guruhsiz</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
+                <h2 class="text-2xl font-bold">45</h2>
+                <p class="text-gray-600">Qarzdor</p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Search and Filters -->
+        <div class="flex justify-between mb-3">
+            <input type="text" placeholder="Qidirish..." class="p-2 border rounded w-1/3">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">Filter</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded" id="addStudentBtn">+ O‘quvchi qo‘shish</button>
+        </div>
+
+        <!-- Students Table -->
+        <div class="bg-white p-5 rounded-xl shadow">
+            <table class="w-full border-collapse">
+                <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-3 text-left">ID</th>
+                    <th class="p-3 text-left">To‘liq ismi</th>
+                    <th class="p-3 text-left">Yoshi</th>
+                    <th class="p-3 text-left">Telefon raqami</th>
+                    <th class="p-3 text-left">Guruh</th>
+                    <th class="p-3 text-left">Balans</th>
+                    <th class="p-3 text-left">Amallar</th>
+                </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                <tr class="border-t">
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3"></td>
+                    <td class="p-3 text-green-500"></td>
+                    <td class="p-3">
+                        <button class="bg-blue-500 text-white px-2 py-1 rounded">✏️</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Modal (Popup) -->
@@ -87,6 +131,8 @@
             <input type="text" id="surname" required>
             <label>Yosh:</label>
             <input type="number" id="age" required>
+            <label>Telefon raqam:</label>
+            <input type="number" id="phone" required>
             <button id="saveStudent">Saqlash</button>
         </div>
     </div>

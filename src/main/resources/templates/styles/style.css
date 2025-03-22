@@ -1,61 +1,81 @@
 body {
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
 }
+
 .container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+header .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-box {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
+    font-size: 18px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
-th, td {
+
+input, button {
     padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ddd;
 }
-th {
-    background: #6a1b9a;
-    color: white;
-}
+
 button {
-    background-color: #6a1b9a;
+    background: #007bff;
     color: white;
-    padding: 10px;
-    border: none;
     cursor: pointer;
-    border-radius: 5px;
 }
-button:hover {
-    background-color: #4a148c;
-}
-.modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
+
+table {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-.modal-content {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-.close {
-    float: right;
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+td .edit, td .delete {
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
 }
+
+.edit {
+    background: #28a745;
+}
+
+.delete {
+    background: #dc3545;
+}
+

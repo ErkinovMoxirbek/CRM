@@ -1,0 +1,37 @@
+body {
+    background-color: #f5f6fa;
+}
+.sidebar {
+    width: 250px;
+    background: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar a {
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.sidebar a:hover {
+    background: #007bff;
+    color: white;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.col-md-3{
+    width: 20%;
+}
+.chart{
+    position: relative;
+    top: 8%;
+}

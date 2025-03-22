@@ -6,41 +6,9 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f5f6fa;
-        }
-        .sidebar {
-            width: 250px;
-            background: #fff;
-            min-height: 100vh;
-            padding: 20px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar a {
-            display: block;
-            color: #333;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .sidebar a:hover {
-            background: #007bff;
-            color: white;
-        }
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .col-md-3{
-            width: 20%;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
 <div class="d-flex">
@@ -87,6 +55,12 @@
                     <h5>Kurslar soni</h5>
                     <h3 id="courses">Loading...</h3>
                 </div>
+            </div>
+        </div>
+        <!--Chart-->
+        <div class="chart">
+            <div class="bg-white p-5 rounded-xl shadow mb-5" >
+                <canvas id="studentsChart"></canvas>
             </div>
         </div>
     </div>

@@ -13,3 +13,16 @@ async function fetchStats() {
     }
 }
 fetchStats();
+
+const ctx = document.getElementById('studentsChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Faol', 'Guruhsiz', 'Qarzdor'],
+        datasets: [{
+            label: 'O‘quvchilar statistikasi',
+            data: [52, 56, 45],
+            backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
+        }]
+    }
+});
