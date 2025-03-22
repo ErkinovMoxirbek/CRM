@@ -6,6 +6,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
     <style>
         body {
             background-color: #f5f6fa;
@@ -47,50 +48,49 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h4 class="mb-4">Ziyokor LMS</h4>
-        <a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
-        <a href="student-dashboard.html"><i class="fa-solid fa-users"></i> O'quvchilar</a>
+        <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        <a href="form.html"><i class="fa-solid fa-users"></i> O'quvchilar</a>
         <a href="#"><i class="fa-solid fa-layer-group"></i> Guruhlar</a>
         <a href="#"><i class="fa-solid fa-book"></i> Kurslar</a>
         <a href="#"><i class="fa-solid fa-user-tie"></i> Xodimlar</a>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h2 class="mb-4">Dashboard</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card p-3">
-                    <h5>O'quvchilar soni</h5>
-                    <h3 id="count-student">Loading...</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card p-3">
-                    <h5>Muzlagan o'quvchilar</h5>
-                    <h3 id="frozen-students">Loading...</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card p-3">
-                    <h5>Guruhlar soni</h5>
-                    <h3 id="count-group">Loading...</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card p-3">
-                    <h5>Xodimlar soni</h5>
-                    <h3 id="employees">Loading...</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card p-3">
-                    <h5>Kurslar soni</h5>
-                    <h3 id="courses">Loading...</h3>
-                </div>
-            </div>
+    <div class="container">
+        <h2>Studentlar Ro‘yxati</h2>
+        <button id="addStudentBtn">+ Student qo‘shish</button>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Ism</th>
+                <th>Familiya</th>
+                <th>Yosh</th>
+                <th>Amallar</th>
+            </tr>
+            </thead>
+            <tbody id="studentTableBody">
+            <!-- Studentlar shu yerda chiqadi -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal (Popup) -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Student qo‘shish</h3>
+            <input type="hidden" id="studentId">
+            <label>Ism:</label>
+            <input type="text" id="name" required>
+            <label>Familiya:</label>
+            <input type="text" id="surname" required>
+            <label>Yosh:</label>
+            <input type="number" id="age" required>
+            <button id="saveStudent">Saqlash</button>
         </div>
     </div>
 </div>
-<script src="js/dashboard.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
