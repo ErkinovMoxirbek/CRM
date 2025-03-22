@@ -36,5 +36,13 @@ public class StudentService {
     public Optional<StudentEntity> getStudentById(Long id) {
         return studentRepository.findById(id);
     }
+
+    public Integer studentCount() {
+        return studentRepository.findAllByVisibleTrue().size();
+    }
+
+    public Integer studentVisibleFalse() {
+        return (studentRepository.findAll().size() - studentRepository.findAllByVisibleTrue().size());
+    }
 }
 

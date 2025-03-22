@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+        .sidebar {
+            width: 250px;
+            background: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #007bff;
+            color: white;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .col-md-3{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="mb-4">Ziyokor LMS</h4>
+        <a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        <a href="form.html"><i class="fa-solid fa-users"></i> O'quvchilar</a>
+        <a href="#"><i class="fa-solid fa-layer-group"></i> Guruhlar</a>
+        <a href="#"><i class="fa-solid fa-book"></i> Kurslar</a>
+        <a href="#"><i class="fa-solid fa-user-tie"></i> Xodimlar</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="mb-4">Dashboard</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <h5>O'quvchilar soni</h5>
+                    <h3 id="count-student">Loading...</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <h5>Muzlagan o'quvchilar</h5>
+                    <h3 id="frozen-students">Loading...</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <h5>Guruhlar soni</h5>
+                    <h3 id="count-group">Loading...</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <h5>Xodimlar soni</h5>
+                    <h3 id="employees">Loading...</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <h5>Kurslar soni</h5>
+                    <h3 id="courses">Loading...</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

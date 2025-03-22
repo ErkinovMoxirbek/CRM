@@ -26,7 +26,7 @@ public class StudentEntity {
     @Column(name = "payment")
     private Boolean payment = false;
     @Column(name = "visible")
-    private Boolean visible = false;
+    private Boolean visible = true;
 
     public StudentEntity(Long id, String name, String surname, int age, GenderEnum gender, String phone, Double balance, Boolean payment, Boolean visible) {
         this.id = id;
