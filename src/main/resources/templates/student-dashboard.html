@@ -9,41 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <style>
-        body {
-            background-color: #f5f6fa;
-        }
-        .sidebar {
-            width: 250px;
-            background: #fff;
-            min-height: 100vh;
-            padding: 20px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar a {
-            display: block;
-            color: #333;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .sidebar a:hover {
-            background: #007bff;
-            color: white;
-        }
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .col-md-3{
-            width: 20%;
-        }
-    </style>
+
 </head>
 <body>
 <div class="d-flex">
@@ -62,19 +28,19 @@
         <!-- Stats Section -->
         <div class="grid grid-cols-4 gap-5 mb-5">
             <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
-                <h2 class="text-2xl font-bold">108</h2>
+                <h2 class="text-2xl font-bold">Loading...</h2>
                 <p class="text-gray-600">O‘quvchilar soni</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
-                <h2 class="text-2xl font-bold">52</h2>
+                <h2 class="text-2xl font-bold">Loading...</h2>
                 <p class="text-gray-600">Faol</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
-                <h2 class="text-2xl font-bold">56</h2>
+                <h2 class="text-2xl font-bold">Loading...</h2>
                 <p class="text-gray-600">Guruhsiz</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow flex flex-col items-center">
-                <h2 class="text-2xl font-bold">45</h2>
+                <h2 class="text-2xl font-bold">Loading...</h2>
                 <p class="text-gray-600">Qarzdor</p>
             </div>
         </div>
@@ -96,8 +62,9 @@
                 <tr class="bg-gray-200">
                     <th class="p-3 text-left">ID</th>
                     <th class="p-3 text-left">To‘liq ismi</th>
-                    <th class="p-3 text-left">Yoshi</th>
+                    <th class="p-3 text-left">Tug'ulgan sanasi</th>
                     <th class="p-3 text-left">Telefon raqami</th>
+                    <th class="p-3 text-left">Ota-Onasining tel. raqami</th>
                     <th class="p-3 text-left">Guruh</th>
                     <th class="p-3 text-left">Balans</th>
                     <th class="p-3 text-left">Amallar</th>
@@ -105,6 +72,7 @@
                 </thead>
                 <tbody id="studentTableBody">
                 <tr class="border-t">
+                    <td class="p-3"></td>
                     <td class="p-3"></td>
                     <td class="p-3"></td>
                     <td class="p-3"></td>

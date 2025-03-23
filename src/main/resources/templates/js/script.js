@@ -12,10 +12,11 @@ function loadStudents() {
                     <tr>
                         <td>${index + 1}</td>
                         <td>${student.name} ${student.surname}</td>
-                        <td>${student.age}</td>
+                        <td>${student.birthDate}</td>
                         <td>${student.phone}</td>
+                        <td>${student.parentPhone}</td>
                         <td>Loading...</td>
-                        <td>${student.balance} Points</td>
+                        <td>${student.balance} UZS</td>
                         <td>
                             <button onclick="editStudent(${student.id})">✏️ Edit</button>
                             <button onclick="deleteStudent(${student.id})">❌ Delete</button>

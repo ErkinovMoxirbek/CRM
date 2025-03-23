@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "student")
 public class StudentEntity {
@@ -15,12 +17,14 @@ public class StudentEntity {
     private String name;
     @Column(name = "surname")
     private String surname;
-    @Column(name = "age")
-    private int age;
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
     @Column(name = "gender")
     private GenderEnum gender;
     @Column(name = "phone")
     private String phone;
+    @Column(name = "parent_phone")
+    private String parentPhone;
     @Column(name = "balance")
     private Double balance = 0.0;
     @Column(name = "payment")
@@ -28,13 +32,14 @@ public class StudentEntity {
     @Column(name = "visible")
     private Boolean visible = true;
 
-    public StudentEntity(Long id, String name, String surname, int age, GenderEnum gender, String phone, Double balance, Boolean payment, Boolean visible) {
+    public StudentEntity(Long id, String name, String surname, LocalDate birthDate, GenderEnum gender, String phone, String parentPhone , Double balance, Boolean payment, Boolean visible) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.age = age;
+        this.birthDate = birthDate;
         this.gender = gender;
         this.phone = phone;
+        this.parentPhone = parentPhone;
         this.balance = balance;
         this.payment = payment;
         this.visible = visible;
@@ -67,13 +72,22 @@ public class StudentEntity {
         this.surname = surname;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
+
+    public String getParentPhone() {
+        return parentPhone;
+    }
+
+    public void setParentPhone(String parentPhone) {
+        this.parentPhone = parentPhone;
+    }
+
 
     public GenderEnum getGender() {
         return gender;

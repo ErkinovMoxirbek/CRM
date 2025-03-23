@@ -4,22 +4,25 @@ import com.example.enums.GenderEnum;
 import jakarta.persistence.Column;
 import lombok.*;
 
+import java.time.LocalDate;
+
 public class StudentDTO {
     private Long id;
     private String name;
     private String surname;
-    private int age;
+    private LocalDate birthDate;
     private GenderEnum gender;
     private String phone;
+    private String parentPhone;
     private Double balance;
     private Boolean payment;
     private Boolean visible;
 
-    public StudentDTO(Long id, String name, String surname, int age, GenderEnum gender, String phone, Double balance, Boolean payment, Boolean visible) {
+    public StudentDTO(Long id, String name, String surname, LocalDate birthDate, GenderEnum gender, String phone, String parentPhone, Double balance, Boolean payment, Boolean visible) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.age = age;
+        this.birthDate = birthDate;
         this.gender = gender;
         this.phone = phone;
         this.balance = balance;
@@ -54,12 +57,20 @@ public class StudentDTO {
         this.surname = surname;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getParentPhone() {
+        return parentPhone;
+    }
+
+    public void setParentPhone(String parentPhone) {
+        this.parentPhone = parentPhone;
     }
 
     public GenderEnum getGender() {

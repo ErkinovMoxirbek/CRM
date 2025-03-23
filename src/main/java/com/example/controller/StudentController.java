@@ -40,7 +40,7 @@ public class StudentController {
     @GetMapping("/{phoneNumber}")
     public ResponseEntity<StudentDTO> getStudentByPhone(@PathVariable String phoneNumber) {
         return studentService.getStudentByPhoneNumber(phoneNumber)
-                .map(student -> ResponseEntity.ok(new StudentDTO(student.getId(),student.getName(),student.getSurname(),student.getAge(),student.getGender(), student.getPhone(), student.getBalance(),student.getPayment(),student.getVisible())))
+                .map(student -> ResponseEntity.ok(new StudentDTO(student.getId(),student.getName(),student.getSurname(),student.getBirthDate(),student.getGender(), student.getPhone() , student.getParentPhone(), student.getBalance(),student.getPayment(),student.getVisible())))
                 .orElse(ResponseEntity.notFound().build());
     }
     @DeleteMapping("/delete/{id}")
