@@ -1,0 +1,122 @@
+/* Modal fon (orqa qorayish) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Gorizontal markaz */
+    align-items: center; /* Vertikal markaz */
+    background: rgba(0, 0, 0, 0.5); /* Orqa fonni qoraytirish */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+/* Modal ochilganda */
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Modal kontenti */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Row-larni yonma-yon qilish */
+.modal-body {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Row-1 va Row-2 */
+.row-1, .row-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label va input styling */
+.modal-content label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.modal-content input:focus, .modal-content textarea:focus {
+    border-color: #007BFF;
+}
+
+/* Jins tanlash tugmalari */
+.gender-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #f0f0f0;
+    transition: 0.3s;
+}
+
+.gender-btn:hover, .gender-btn.active {
+    background: #007BFF;
+    color: white;
+}
+
+/* Izoh (textarea) */
+#comment {
+    height: 80px;
+    resize: none;
+}
+
+/* Saqlash tugmasi */
+#saveStudent {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#saveStudent:hover {
+    background: #0056b3;
+}
+
+/* Mobil ekranda ustma-ust joylashuvi */
+@media (max-width: 600px) {
+    .modal-body {
+        flex-direction: column;
+    }
+}

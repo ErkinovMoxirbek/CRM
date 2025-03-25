@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 <body>
+<div id="toast" class="toast">Talaba muvaffaqiyatli qo‘shildi!</div>
+
 <div class="d-flex">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -64,7 +66,7 @@
                     <th class="p-3 text-left">To‘liq ismi</th>
                     <th class="p-3 text-left">Tug'ulgan sanasi</th>
                     <th class="p-3 text-left">Telefon raqami</th>
-                    <th class="p-3 text-left">Ota-Onasining tel. raqami</th>
+                    <th class="p-3 text-left">Ota-Ona tel. raqami</th>
                     <th class="p-3 text-left">Guruh</th>
                     <th class="p-3 text-left">Balans</th>
                     <th class="p-3 text-left">Amallar</th>
@@ -93,18 +95,42 @@
             <span class="close">&times;</span>
             <h3>Student qo‘shish</h3>
             <input type="hidden" id="studentId">
-            <label>Ism:</label>
-            <input type="text" id="name" required>
-            <label>Familiya:</label>
-            <input type="text" id="surname" required>
-            <label>Yosh:</label>
-            <input type="number" id="age" required>
-            <label>Telefon raqam:</label>
-            <input type="number" id="phone" required>
-            <button id="saveStudent">Saqlash</button>
+
+            <div class="modal-body">
+                <div class="row-1">
+                    <label for="name">Ism<span style="color: red;">*</span>:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="surname">Familiya<span style="color: red;">*</span>:</label>
+                    <input type="text" id="surname" required>
+
+                    <label for="birth-date">Tug'ulgan sanasi<span style="color: red;">*</span>:</label>
+                    <input type="date" id="birth-date" required>
+
+                    <label>Jinsi<span style="color: red;">*</span>:</label>
+                    <div class="gender-buttons">
+                        <button id="maleBtn" class="gender-btn">Erkak</button>
+                        <button id="femaleBtn" class="gender-btn">Ayol</button>
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <label for="parent-phone">Ota-onasining telefon raqami<span style="color: red;">*</span>:</label>
+                    <input type="number" id="parent-phone" required>
+
+                    <label for="phone">Telefon raqam:</label>
+                    <input type="number" id="phone">
+
+                    <label for="comment">Izoh:</label>
+                    <textarea name="comment" id="comment"></textarea>
+                </div>
+            </div>
+
+            <button id="saveStudent" class="saveStudent">Saqlash</button>
         </div>
     </div>
+
 </div>
-<script src="js/script.js"></script>
+<script src="js/student-dashboard2.js"></script>
 </body>
 </html>

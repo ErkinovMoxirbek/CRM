@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'quvchi Qo'shish</title>
+    <link rel="stylesheet" href="styles/student-form.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="card">
+        <h2>O'quvchi Qo'shish</h2>
+        <div class="form-group">
+            <label for="name">Ismi</label>
+            <input type="text" id="name" placeholder="Ali">
+        </div>
+        <div class="form-group">
+            <label for="surname">Familiyasi</label>
+            <input type="text" id="surname" placeholder="Aliyev">
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefon raqami</label>
+            <input type="tel" id="phone" placeholder="+998 (__) ___-__-__">
+        </div>
+        <div class="form-group">
+            <label for="parent-phone">Ota-onasining telefon raqami</label>
+            <input type="tel" id="parent-phone" placeholder="+998 (__) ___-__-__">
+        </div>
+        <div class="form-group">
+            <label for="dob">Tug'ilgan sanasi</label>
+            <input type="date" id="dob">
+        </div>
+        <div class="form-group">
+            <label>Jinsi</label>
+            <div class="gender-buttons">
+                <button id="maleBtn" class="gender-btn">Erkak</button>
+                <button id="femaleBtn" class="gender-btn">Ayol</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comment">Izoh</label>
+            <input type="text" id="comment" placeholder="Izoh...">
+        </div>
+        <div class="form-group">
+            <label for="group">Guruhga biriktirish</label>
+            <input type="checkbox" id="group">
+        </div>
+        <div class="buttons">
+            <button class="back">Orqaga</button>
+            <button class="save">Saqlash</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/student-form.js"></script>
+<script src="js/student-dashboard.js"></script>
+</body>
+</html>

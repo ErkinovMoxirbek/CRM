@@ -33,6 +33,7 @@ public class StudentController {
     // 🔹 Yangi talaba qo‘shish
     @PostMapping(value = "/add")
     public ResponseEntity<StudentEntity> addStudent(@RequestBody StudentEntity student) {
+        System.out.println(student.toString());
         return ResponseEntity.ok(studentService.addStudent(student));
     }
 

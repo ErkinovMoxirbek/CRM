@@ -128,4 +128,20 @@ public class StudentEntity {
     public void setVisible(Boolean visible) {
         this.visible = visible;
     }
+
+    @Override
+    public String toString() {
+        return "StudentEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", birthDate=" + birthDate +
+                ", gender=" + gender +
+                ", phone='" + phone + '\'' +
+                ", parentPhone='" + parentPhone + '\'' +
+                ", balance=" + balance +
+                ", payment=" + payment +
+                ", visible=" + visible +
+                '}';
+    }
 }
